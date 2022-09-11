@@ -1,0 +1,38 @@
+#    ______     __     __    __     ______   __         ______        ______     __  __     __         ______     ______
+#   /\  ___\   /\ \   /\ "-./  \   /\  == \ /\ \       /\  ___\      /\  == \   /\ \/\ \   /\ \       /\  ___\   /\  ___\
+#   \ \___  \  \ \ \  \ \ \-./\ \  \ \  _-/ \ \ \____  \ \  __\      \ \  __<   \ \ \_\ \  \ \ \____  \ \  __\   \ \___  \
+#   \/\_____\  \ \_\  \ \_\ \ \_\  \ \_\    \ \_____\  \ \_____\     \ \_\ \_\  \ \_____\  \ \_____\  \ \_____\  \/\_____\
+#   \/_____/   \/_/   \/_/  \/_/   \/_/     \/_____/   \/_____/      \/_/ /_/   \/_____/   \/_____/   \/_____/   \/_____/
+
+# Simple Rules version 0.1.0
+# By LukeIsCoding
+# This plugin is licensed under the GNU General Purpose License Version 3.0 or later
+# My website: https://lukeiscoding.net
+# My GitHub: https://github.com/LukeIsCodingNet
+# If you like this plugin and want to support me, consider doing so on my ko-fi: https://ko-fi.com/lukeiscoding
+
+
+
+# Should we send the player a welcome message to tell them to preform the rules command, and agree to the server rules?
+send-player-a-welcome-message: true
+
+# This is the welcome message that gets sent to the player on join if the setting above this one is set to true.
+player-welcome-message: '&aWelcome &b%player_name% &ato &b%server_name%&a! Please make sure you agree to the server rules by doing /rules, then do /rulesaccept or /rulesdeny to accept or deny the rules of the server.'
+
+# This is the list of server rules.
+server-rules:
+  - '&aRule 1'
+  - '&aRule 2'
+  - '&aRule 3'
+
+# This is the command that gets preformed when a player agrees to the server rules.
+rules-agree-commands:
+  - 'lp user %player_name% permission set simplerules.rules.agree true'
+  - 'lp user %player_name% permission unset simplerules.rules.agree'
+  - 'lp user %player_name% permission unset simplerules.rules.deny'
+
+# This is the message that gets sent to the player after they have agreed to the rules.
+player-rules-agree-message: '&aThank you for agreeing to the rules, welcome to &b%server_name%&a!'
+
+# This is the command that gets preformed when a player denies the server rules.
+rules-deny-command: 'kick %player_name% You need to agree to the rules first'

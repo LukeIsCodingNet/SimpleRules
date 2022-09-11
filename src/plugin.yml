@@ -1,0 +1,28 @@
+main: net.lukeiscoding.spigot.simplerules.SimpleRules
+name: SimpleRules
+api-version: 1.19
+version: 0.1.0
+author: LukeIsCoding
+description: A simple rules plugin!
+
+commands:
+  rules:
+    description: Shows the rules of the server.
+    permission: simplerules.use
+    permission-message: I am sorry but you do not have permission to use this command, please contact a server admin if you think this is an error!
+    default: true
+  rulesaccept:
+    description: Allows the user to accept the rules.
+    permission: simplerules.rules.accept
+    permission-message: I am sorry but you do not have permission to use this command, please contact a server admin if you think this is an error!
+    default: false
+  rulesdeny:
+    description: Allows the user to deny the rules.
+    permission: simplerules.rules.deny
+    permission-message: I am sorry but you do not have permission to use this command, please contact a server admin if you think this is an error!
+    default: false
+  simplerulesadmin:
+    description: Opens the admin panel for this plugin.
+    permission: simplerules.admin
+    permission-message: I am sorry but you do not have permission to use this command, please contact a server admin if you think this is an error!
+    default: op
