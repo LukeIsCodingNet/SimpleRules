@@ -1,7 +1,7 @@
 main: net.lukeiscoding.spigot.simplerules.SimpleRules
 name: SimpleRules
 api-version: 1.19
-version: 0.1.0
+version: 0.1.1
 author: LukeIsCoding
 description: A simple rules plugin!
 

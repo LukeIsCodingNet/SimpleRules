@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="SimpleRules-0.1.0">
-    <output-path>$PROJECT_DIR$/out/artifacts/SimpleRules_0_1_0</output-path>
-    <root id="archive" name="SimpleRules-0.1.0.jar">
+  <artifact type="jar" name="SimpleRules-0.1.1">
+    <output-path>$PROJECT_DIR$/out/artifacts/SimpleRules_0_1_1</output-path>
+    <root id="archive" name="SimpleRules-0.1.1.jar">
       <element id="module-output" name="SimpleRules" />
       <element id="file-copy" path="$PROJECT_DIR$/src/config.yml" />
       <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />

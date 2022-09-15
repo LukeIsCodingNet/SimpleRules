@@ -33,10 +33,13 @@ public class EventPlayerJoin implements Listener {
     public void onPlayerJoin(final PlayerJoinEvent event) {
         Player p = event.getPlayer();
 
-        if (plugin.getConfig().getBoolean("send-player-a-welcome-message")) {
+        if (plugin.getConfig().getBoolean("send-player-a-welcome-message") && !p.hasPermission(PermissionNodes.RULES_WELCOME_MESSAGE_BYPASS.getPermissionNode())) {
             p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("player-welcome-message").replaceAll("%player_name%", p.getDisplayName()).replaceAll("%server_name%", Bukkit.getServer().getName())));
         } else if (plugin.getConfig().getBoolean("send-player-a-welcome-message") || p.hasPermission(PermissionNodes.RULES_ACCEPT.getPermissionNode())) {
             SimpleRules.LOGGER.severe("Did not send the player the welcome message because its ether disabled in the config.yml or the player has already agreed to the rules.");
+            return;
+        } else if (p.hasPermission(PermissionNodes.RULES_WELCOME_MESSAGE_BYPASS.getPermissionNode())) {
+            SimpleRules.LOGGER.severe("Did not send the player the welcome message, already agreed to the rules!");
             return;
         }
     }

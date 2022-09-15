@@ -20,7 +20,8 @@ public enum PermissionNodes {
     USE_RULES("simplerules.use"),
     RULES_ACCEPT("simplerules.rules.accept"),
     RULES_DENY("simplerules.rules.deny"),
-    ADMIN("simplerules.admin");
+    ADMIN("simplerules.admin"),
+    RULES_WELCOME_MESSAGE_BYPASS("simplerules.rules.bypasswelcomemessage");
 
     private String permissionNode;
 
