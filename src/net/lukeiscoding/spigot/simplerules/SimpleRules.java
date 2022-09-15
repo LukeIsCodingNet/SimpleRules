@@ -34,6 +34,7 @@ public class SimpleRules extends JavaPlugin {
     private static final Permission acceptPermission = new Permission(PermissionNodes.RULES_ACCEPT.getPermissionNode());
     private static final Permission denyPermission = new Permission(PermissionNodes.RULES_DENY.getPermissionNode());
     private static final Permission usePermission = new Permission(PermissionNodes.USE_RULES.getPermissionNode());
+    private static final Permission messageBypassPermission = new Permission(PermissionNodes.RULES_WELCOME_MESSAGE_BYPASS.getPermissionNode());
 
     public static final Logger LOGGER = Logger.getLogger("SimpleRules");
 
@@ -44,6 +45,7 @@ public class SimpleRules extends JavaPlugin {
         Bukkit.getServer().getPluginManager().addPermission(acceptPermission);
         Bukkit.getServer().getPluginManager().addPermission(denyPermission);
         Bukkit.getServer().getPluginManager().addPermission(usePermission);
+        Bukkit.getServer().getPluginManager().addPermission(messageBypassPermission);
 
         registerCommands();
         registerEvents();
